@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    font-style: italic;
+    background-image: url("achtergronduu.png");
+    background-size: cover;
+    
+    
+}
+
+input[type=text] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+  }
+
+  input[type=date] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+  }
+
+  input[type=email] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+  }
+
+  input[type=tel] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+  }
