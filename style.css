@@ -1,10 +1,26 @@
 body{
+    margin-top: 250px;
     text-align: center;
-    font-style: italic;
-    background-image: url("achtergronduu.png");
-    background-size: cover;
-    
-    
+    font-style: oblique;
+    font-family: "Berlin Sans FB Demi";
+    background-image: url("achtergrondutrecht.png");
+    background-size: auto;
+
+}
+
+h1{
+    align-content: center;
+    size: 100px;
+    justify-content: center;
+}
+
+input[type=date] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
 }
 
 input[type=text] {
@@ -14,31 +30,44 @@ input[type=text] {
     margin: 8px 0;
     box-sizing: border-box;
     background-color: rgb(255, 187, 0);
-  }
+}
 
-  input[type=date] {
+input[type=email] {
     width: 175px;
     height: 25px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     background-color: rgb(255, 187, 0);
-  }
+}
 
-  input[type=email] {
+input[type=tel] {
     width: 175px;
     height: 25px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     background-color: rgb(255, 187, 0);
-  }
+}
 
-  input[type=tel] {
+input[type=button]{
+    margin-left: 1750px;
+    text-align: center;
+    width: 70px;
+    height: 5px;
+    padding: 9px;
+    box-sizing: content-box;
+    background-color: rgb(255, 187, 0);
+}
+
+
+input[type=time] {
     width: 175px;
     height: 25px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     background-color: rgb(255, 187, 0);
-  }
+}
+
+
