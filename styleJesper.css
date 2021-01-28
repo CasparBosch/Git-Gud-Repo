@@ -1,0 +1,107 @@
+body{
+    margin-top: 250px;
+    text-align: center;
+    font-style: oblique;
+    font-family: "Berlin Sans FB Demi";
+    background-image: url("achtergrondutrecht.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+h1{
+    align-content: center;
+    size: 100px;
+    justify-content: center;
+}
+
+input[type=date] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+}
+
+input[type=text] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+}
+
+input[type=email] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+}
+
+input[type=tel] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+}
+
+input[type=password] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+}
+
+input[type=button]{
+    margin-left: 1750px;
+    text-align: center;
+    margin: 8px 0;
+    width: 70px;
+    height: 5px;
+    padding: 9px;
+    box-sizing: content-box;
+    background-color: rgb(255, 187, 0);
+}
+
+
+input[type=time] {
+    width: 175px;
+    height: 25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 187, 0);
+}
+
+nav {
+    display: flex;
+    background-color: rgb(255, 187, 0);
+    color: #000000;
+    cursor: pointer;
+    margin-top: -110px;
+    margin-left: -8px;
+    width: 1920px;
+}
+
+nav div {
+    flex-grow: 1;
+    text-align: center;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 2.4em;
+    transition: all 0.4s ease-out;
+
+}
+
+nav div:hover {
+    background-color: rgb(255, 187, 0);
+}
+
