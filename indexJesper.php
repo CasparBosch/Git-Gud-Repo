@@ -6,16 +6,19 @@
 <html>
 
 <head>
+    <!--title web page-->
     <title>Maak een afspraak</title>
     <script>
+        <!--confirmation appointment made-->
         function confirmInput() {
             fname = document.forms[0].fname.value;
             alert("Afspraak gemaakt!" + fname + "Je wordt nu weer verwezen naar de homepagina");
         }
     </script>
 
-
+    <!--attempt at java script-->
     <script src="script1.js"></script>
+    <!--reference stylesheet-->
     <link rel="stylesheet" href="styleJesper.css"/>
 
 
@@ -27,7 +30,7 @@
 
         </form>
         <script>
-            //reset functie
+            <!--reset function-->
             function myFunction() {
                 document.getElementById("frm1").reset();
             }
@@ -36,7 +39,7 @@
 
         <header>
             <nav>
-                //links naar main website
+                <!--links to main website UU-->
                 <div><a href="https://www.uu.nl/">Homepagina</a></div>
                 <div><a href="https://www.uu.nl/organisatie/contact">Contact Opnemen</a></div>
                 <div><a href="https://www.uu.nl/informatie-coronavirus">Coronavirus</a></div>
@@ -48,6 +51,7 @@
 
         <h1>Maak een Afspraak</h1>
         <div id="center">
+            <!--form to make an appointment-->
             <form>
                 <form onsubmit="confirmInput()" action="https://www.uu.nl/">
                     <div class="data-field">
@@ -93,18 +97,14 @@
                     </div>
                     <br>
                     <div class="data-field">
+                        <!--reset button-->
                         <input type="reset" value="Reset"><br>
                         <br>
+                        <!--submit button to send the data to the database-->
                         <input id="Verzenden" type="submit" name="Verzenden" value="Verzenden">
                     </div>
                 </form>
             </form>
         </div>
     </body1>
-
-
-    <body2>
-
-
-    </body2>
 </html>

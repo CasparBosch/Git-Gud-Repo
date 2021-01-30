@@ -1,5 +1,6 @@
 <?php
 /** @var mysqli $conn */
+//use DB_connection.php
 require_once "DB_Connect.php";
 
 //Retrieve the GET parameter from the 'Super global'

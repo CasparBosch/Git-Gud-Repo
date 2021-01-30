@@ -1,4 +1,5 @@
 <?php
+
 function openConn(){
     $dbHost = "localHost";
     $dbUser = "root";

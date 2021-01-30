@@ -1,13 +1,13 @@
 <?php
-
+//Use DB_connection.php
 require_once "DB_Connect.php";
 
+//open connection
 $conn = openConn();
 
 //Check if Post isset, else do nothing
 if (isset($_POST['submit'])) {
     //Postback with the data showed to the user, first retrieve data from 'Super global'
-    //TODO variabele volgens form waar name=tijd
     $id = mysqli_escape_string($conn, $_POST['id']);
     $datum = mysqli_escape_string($conn, $_POST['Datum']);
     $tijd = mysqli_escape_string($conn, $_POST['Tijd']);
@@ -19,7 +19,6 @@ if (isset($_POST['submit'])) {
 
     //Require the form validation handling
     require_once "form-validation.php";
-    //TODO afspraak array variabelem toevoegen, maken met variabelen hierboven
     //Save variables to array so the form won't break
     $afspraak = [
         'Datum' => $datum,
@@ -31,8 +30,8 @@ if (isset($_POST['submit'])) {
         'Opmerkingen' => $opmerkingen,
     ];
 
+    //if for errors and redirect to index
     if (empty($errors)) {
-        //TODO query fixen
         $query = "UPDATE albums
                   SET datum = '$datum', tijd = '$tijd', voornaam = '$voornaam', achternaam = '$achternaam', email = '$email', telefoonnummer = '$telefoonnummer', opmerkingen = '$opmerkingen'
                   WHERE id = '$id'";
@@ -69,20 +68,19 @@ mysqli_close($conn);
 ?>
 
 <!doctype html>
+<!--Start html-->
 <html lang="en">
 <head>
     <title>Edit</title>
     <meta charset="utf-8"/>
+    <!--link to use .css stylesheet-->
     <link rel="stylesheet" type="text/css" href="styleJesper.css"/>
 </head>
 <body>
 <div id="center">
+    <!--form for input edits of reservation-->
     <form action="" method="post" enctype="multipart/form-data">
-        <?php
-        //TODO form maken zoals tijd
-        ?>
-
-        <div class="data-field">
+                <div class="data-field">
             <label for="datum">Datum</label>
             <br>
             <input id="datum" type="date" name="datum" value="<?= $afspraak['datum']; ?>"/>
@@ -140,6 +138,7 @@ mysqli_close($conn);
     </form>
 </div>
 <div>
+    <!--link to go back to index-->
     <a href="indexJesper.php">Go back to the list</a>
 </div>
 </body>
