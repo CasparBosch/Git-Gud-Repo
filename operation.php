@@ -1,10 +1,10 @@
 <?php
-//refereer naar de connectfunctie om te gebruiken zonder alles elk bestand opnieuw te schrijven
+//reference connect function
 require_once "DB_Connect.php";
 $conn = openConn();
 
 function createData(){
-    //variabelen aanmaken en input controleren
+    //create variables and check input
     $voornaam = textboxValue("Voornaam");
     $achternaam = textboxValue("Achternaam");
     $email = textboxValue("Email");
@@ -13,7 +13,7 @@ function createData(){
     $tijd = textboxValue("Tijd");
     $opmerkingen = textboxValue("Opmerkingen");
 
-    // Variabelen naar de database
+    // Variables to database
     if ($datum&&$tijd&&$voornaam&&$achternaam&&$email&&$telefoonnummer&&$opmerkingen){
         $sql = "INSERT INTO contact(Datum, Tijd, Voornaam, Achternaam, Woonplaats, Adres, Email, Telefoonnummer, Opmerkingen) 
         VALUES('$datum', '$tijd', '$voornaam', '$achternaam', '$email', '$telefoonnummer', '$opmerkingen')";
@@ -39,8 +39,10 @@ function textboxValue($value){
 ?>
 
 <!DOCTYPE html>
+<!--start html-->
 <html>
 <head>
+    <!--link stylesheet-->
     <link rel="stylesheet" href="styleJesper.css">
 </head>
 </html>

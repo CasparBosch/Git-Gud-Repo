@@ -1,4 +1,5 @@
 <?php
+//start session
 session_start();
 
 $email = '';
@@ -47,19 +48,23 @@ if (isset($_POST['submit'])) {
 }
 ?>
 <!doctype html>
+<!--start html-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--page title-->
     <title>Registreer</title>
+    <!--link stylesheet-->
     <link rel="stylesheet" href="styleJesper.css">
 </head>
 <body>
 
 <header>
     <nav>
+        <!--links to main webpage UU-->
         <div><a href="https://www.uu.nl/">Homepagina</a></div>
         <div><a href="https://www.uu.nl/organisatie/contact">Contact Opnemen</a></div>
         <div><a href="https://www.uu.nl/informatie-coronavirus">Coronavirus</a></div>
@@ -69,6 +74,7 @@ if (isset($_POST['submit'])) {
 </header>
 
 <h1>Nieuwe gebruiker registeren</h1>
+<!--register new user form-->
 <form action="<?= $_SERVER['REQUEST_URI']; ?>" method="post" enctype="multipart/form-data">
     <div>
         <label for="email">email</label>

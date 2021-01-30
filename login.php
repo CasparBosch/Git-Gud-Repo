@@ -46,16 +46,20 @@ if (isset($_POST['submit'])) {
 }
 ?>
 <!doctype html>
+<!--start document type html-->
 <html lang="en">
 <head>
+    <!--page title-->
     <title>Log in</title>
     <meta charset="utf-8"/>
+    <!--reference stylesheet-->
     <link rel="stylesheet" href="styleJesper.css">
 </head>
 <body>
 
 <header>
     <nav>
+        <!--links to main page-->
         <div><a href="https://www.uu.nl/">Homepagina</a></div>
         <div><a href="https://www.uu.nl/organisatie/contact">Contact Opnemen</a></div>
         <div><a href="https://www.uu.nl/informatie-coronavirus">Coronavirus</a></div>
@@ -74,6 +78,7 @@ if (isset($_POST['submit'])) {
 <?php } ?>
 
 <div>
+    <!--log in form-->
     <form id="login" method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
         <label for="email">E-mail</label>
         <br>
@@ -84,11 +89,12 @@ if (isset($_POST['submit'])) {
         <input type="password" name="password" id="password"/>
         <br>
         <input type="submit" name="submit" value="Log in"
+        <!--go back to main page when data submitted-->
         <a href="indexJesper.php"/>
 
     </form>
 </div>
-
+<!--link to go to register and main page-->
 <a href="register.php">Registreer</a>
 <div>
     <a href="indexJesper.php">Maak een afspraak</a>
