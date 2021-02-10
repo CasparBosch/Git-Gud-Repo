@@ -6,7 +6,7 @@ require_once "DB_Connect.php";
 
 //Check if user is logged in, else move to secure page
 if (isset($_SESSION['loggedInUser'])) {
-    header("Location: create.php");
+    header("Location: indexJesper.php");
     exit;
 }
 
