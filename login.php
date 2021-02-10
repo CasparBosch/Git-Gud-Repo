@@ -2,7 +2,7 @@
 session_start();
 //Require database in this file
 require_once "DB_Connect.php";
-/** @var mysqli $conn */
+/** @var $conn */
 
 //Check if user is logged in, else move to secure page
 if (isset($_SESSION['loggedInUser'])) {
@@ -12,6 +12,7 @@ if (isset($_SESSION['loggedInUser'])) {
 
 //If form is posted, lets validate!
 if (isset($_POST['submit'])) {
+
     //Retrieve values (email safe for query)
     $email = mysqli_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
@@ -25,7 +26,16 @@ if (isset($_POST['submit'])) {
 
     //Check if email exists in database
     $errors = [];
-    if ($user) {
+
+    if ($email == "")  {
+        $errors['email'] = "Vul compleet in.";
+    }
+
+    if ($password == "")  {
+        $errors['password'] = "Vul compleet in.";
+    }
+
+    if (empty($errors)) {
         //Validate password
         if (password_verify($password, $user['password'])) {
             //Set email for later use in Session
@@ -44,6 +54,8 @@ if (isset($_POST['submit'])) {
         $errors[] = 'Uw logingegevens zijn onjuist';
     }
 }
+
+$conn->close();
 ?>
 <!doctype html>
 <!--start document type html-->
@@ -82,11 +94,13 @@ if (isset($_POST['submit'])) {
     <form id="login" method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
         <label for="email">E-mail</label>
         <br>
-        <input type="email" name="email" id="email" value="<?= (isset($email) ? $email : ''); ?>"/>
+        <input type="email" name="email" id="email" value="<?= (isset($email) ? htmlentities($email) : ''); ?>"/>
+        <span class="errors"><?=isset($errors['email']) ? $errors['email'] : ''?></span>
         <br>
         <label for="password">Wachtwoord</label>
         <br>
-        <input type="password" name="password" id="password"/>
+        <input type="password" name="password" id="password" value="<?= (isset($password) ? htmlentities($password) : ''); ?>"/>
+        <span class="errors"><?=isset($errors['password']) ? $errors['password'] : ''?></span>
         <br>
         <input type="submit" name="submit" value="Log in"
         <!--go back to main page when data submitted-->
