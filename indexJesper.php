@@ -1,5 +1,16 @@
 <?php
 
+//connect with database
+require_once "DB_Connect.php";
+
+//query to insert data into database
+$insertQuery = "INSERT INTO reserveer(Datum, Tijd, Voornaam, Achternaam, Email, Telefoonnummer, Opmerkingen) VALUES (Datum, Tijd, Voornaam, Achternaam, Email, Telefoonnummer, Opmerkingen)";
+mysqli_query($insertQuery);
+
+if (isset($_POST['submit'])) {
+    $insertQuery;
+}
+
 ?>
 
 <!DOCTYPE html>

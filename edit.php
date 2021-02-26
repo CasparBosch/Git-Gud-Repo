@@ -2,9 +2,6 @@
 //Use DB_connection.php
 require_once "DB_Connect.php";
 
-//open connection
-$conn = openConn();
-
 //Check if Post isset, else do nothing
 if (isset($_POST['submit'])) {
     //Postback with the data showed to the user, first retrieve data from 'Super global'

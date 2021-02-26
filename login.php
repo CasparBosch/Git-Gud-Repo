@@ -10,7 +10,7 @@ if (isset($_SESSION['loggedInUser'])) {
     exit;
 }
 
-//If form is posted, lets validate!
+//If form is posted, lets validate
 if (isset($_POST['submit'])) {
 
     //Retrieve values (email safe for query)
