@@ -113,7 +113,7 @@ if (isset($_POST['submit'])) {
                         <input type="reset" value="Reset"><br>
                         <br>
                         <!--submit button to send the data to the database-->
-                        <input id="Verzenden" type="submit" name="Verzenden" value="Verzenden">
+                        <input id="Verzenden" type="submit" name="Verzenden" value="Verzenden" onclick="window.location.href = 'mail.php'">
                     </div>
                 </form>
             </form>
